@@ -1,13 +1,4 @@
-# Redux with Programming Hero
+# What is Redux
 
-### Foundation
-
-### What problem Redux solving
-
-### React-Redux
-
-### Redux-thunk
-
-### Redux Toolkit
-
-### RTK Query
+- predictable state container.
+- state is status of current time.
