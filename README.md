@@ -1,1 +1,3 @@
-# What is Redux-Toolkit?
+# Drawbacks of Redux
+
+- huge boilerplate
