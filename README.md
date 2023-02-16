@@ -1,3 +1,1 @@
-# What is Redux-thunk?
-
-- middleware
+# What is Redux-Toolkit?
