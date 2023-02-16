@@ -1,1 +1,1 @@
-# How Redux works
+# Why should we use Redux?
