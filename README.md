@@ -1,3 +1,3 @@
-# What is React-Redux?
+# What is Redux-thunk?
 
-- for better development
+- middleware
