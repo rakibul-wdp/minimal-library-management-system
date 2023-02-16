@@ -1,3 +1,3 @@
-# The 3 pillars of Redux
+# What is React-Redux?
 
-- store, action, dispatch
+- for better development
