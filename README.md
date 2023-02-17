@@ -1,3 +1,3 @@
-# When should we use Redux?
+# Is there any alternative to Redux?
 
-- in every project you don't need to use redux
+- React useReducer hook
