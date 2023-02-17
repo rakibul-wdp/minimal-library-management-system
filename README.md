@@ -1,3 +1,3 @@
-# Drawbacks of Redux
+# When should we use Redux?
 
-- huge boilerplate
+- in every project you don't need to use redux
