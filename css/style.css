@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('./fonts/LexendDeca-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Lexend Deca' !important;
+    padding: 10px !important;
+    color: #2B2B35 !important;
+}
+
+#explore-button {
+    border-radius: 0%;
+    font-size: smaller;
+    background: #D93A31;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    margin-top: 2%;
+}
+
+.no-margin {
+    /* margin: 0 !important; */
+    padding: 0 !important;
+}
+
+.icon-text-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-text-div img {
+    width: 40px;
+    margin: 5%;
+}
+
+.bottom-logo-text {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 11px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #B5B5C2;
+    margin: 0%;
+}
+
+.bottom-logo-value {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 2% 0 0;
+}
+
+.content-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-top: 2%;
+}
+
+.content-div p {
+    padding: 0;
+    margin: 0;
+}
+
+.light-text {
+    font-family: 'Lexend Deca' !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
+    font-size: 15px !important;
+    line-height: 20px !important;
+}
+
+.heading-text {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: -0.02em;
+}
+
+.sub-heading-text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 417%;
+    letter-spacing: -0.02em;
+}
+
+
+#bottom-div {
+    background: #2B2B35;
+}
+
+.figure-upper-heading {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 25px;
+}
+
+.figure-sub-heading {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 25px;
+}
