@@ -1,27 +1,25 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import User from "../pages/User";
-import Tasks from "../pages/Tasks";
+import BookList from "../pages/BookList";
+import BookDetail from "../pages/BookDetail";
+import BookEdit from "../pages/BookEdit";
+import BookNew from "../pages/BookNew";
+import BorrowBook from "../pages/BorrowBook";
+import BorrowSummary from "../pages/BorrowSummary";
+import Home from "../pages/Home";
 
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
   {
     path: "/",
-    Component: App,
+    element: <App />,
     children: [
-      {
-        path: "user",
-        Component: User,
-      },
-      {
-        index: true,
-        element: <Tasks />,
-      },
-      {
-        path: "tasks",
-        element: <Tasks />,
-      },
+      { index: true, element: <Home /> },
+      { path: "books", element: <BookList /> },
+      { path: "books/new", element: <BookNew /> },
+      { path: "books/:id", element: <BookDetail /> },
+      { path: "books/:id/edit", element: <BookEdit /> },
+      { path: "books/:id/borrow", element: <BorrowBook /> },
+      { path: "borrow-summary", element: <BorrowSummary /> },
     ],
   },
 ]);
-
-export default router;
