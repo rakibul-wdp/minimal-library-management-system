@@ -1,5 +1,5 @@
-import { createSlice, type PayloadAction, nanoid } from "@reduxjs/toolkit";
-import type { ITask } from "../../../types";
+import { createSlice, nanoid, type PayloadAction } from "@reduxjs/toolkit";
+import type { ITask } from "../../../types/types";
 import type { RootState } from "../../store";
 
 interface InitialState {

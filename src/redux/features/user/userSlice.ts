@@ -1,6 +1,6 @@
-import { createSlice, type PayloadAction, nanoid } from "@reduxjs/toolkit";
+import { createSlice, nanoid, type PayloadAction } from "@reduxjs/toolkit";
+import type { IUser } from "../../../types/types";
 import type { RootState } from "../../store";
-import type { IUser } from "../../../types";
 
 interface InitialState {
   users: IUser[];
