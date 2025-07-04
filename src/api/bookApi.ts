@@ -1,5 +1,5 @@
 import { baseApi } from "./baseApi";
-import { IBook, BookListResponse } from "../types/types";
+import type { IBook, BookListResponse } from "../types/types";
 
 export const bookApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({

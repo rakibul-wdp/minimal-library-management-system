@@ -1,5 +1,5 @@
 import { baseApi } from "./baseApi";
-import { IBorrow, BorrowSummary } from "../types/types";
+import type { IBorrow, BorrowSummary } from "../types/types";
 
 export const borrowApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
