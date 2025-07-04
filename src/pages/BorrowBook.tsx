@@ -29,6 +29,7 @@ export default function BorrowBook() {
       navigate("/books");
     } catch (error) {
       showToast("Failed to borrow book", "error");
+      console.log(error);
     }
   };
 

@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useGetBooksQuery } from "../api/bookApi";
 import BookTable from "../components/books/BookTable";
-import Pagination from "../components/ui/Pagination";
 import { useToast } from "../hooks/useToast";
 import ConfirmationDialog from "../components/ui/ConfirmationDialog";
 import { useDeleteBookMutation } from "../api/bookApi";
+import Toast from "../components/ui/Toast";
+import Pagination from "../components/ui/Pagination";
 
 export default function BookList() {
   const [page, setPage] = useState(1);
@@ -22,6 +23,7 @@ export default function BookList() {
       showToast("Book deleted successfully", "success");
     } catch (error) {
       showToast("Failed to delete book", "error");
+      console.log(error);
     } finally {
       setDeleteId(null);
     }

@@ -19,6 +19,7 @@ export default function BookNew() {
       navigate("/books");
     } catch (error) {
       showToast("Failed to create book", "error");
+      console.log(error);
     }
   };
 
