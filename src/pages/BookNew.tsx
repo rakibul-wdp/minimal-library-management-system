@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 import { useCreateBookMutation } from "../api/bookApi";
 import BookForm from "../components/books/BookForm";
-import type { IBook } from "../types/types";
+import type { BookGenre } from "../types/types";
 import { useToast } from "../hooks/useToast";
 import Toast from "../components/ui/Toast";
 
@@ -10,9 +10,15 @@ export default function BookNew() {
   const [createBook] = useCreateBookMutation();
   const { toast, showToast, hideToast } = useToast();
 
-  const handleSubmit = async (
-    bookData: Omit<IBook, "_id" | "createdAt" | "updatedAt">
-  ) => {
+  const handleSubmit = async (bookData: {
+    title: string;
+    author: string;
+    genre: BookGenre;
+    isbn: string;
+    description?: string;
+    copies: number;
+    available?: boolean;
+  }) => {
     try {
       await createBook(bookData).unwrap();
       showToast("Book created successfully", "success");

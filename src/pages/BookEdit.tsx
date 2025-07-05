@@ -4,6 +4,7 @@ import BookForm from "../components/books/BookForm";
 import Loader from "../components/ui/Loader";
 import Toast from "../components/ui/Toast";
 import { useToast } from "../hooks/useToast";
+import type { BookGenre } from "../types/types";
 
 export default function BookEdit() {
   const { id } = useParams<{ id: string }>();
@@ -15,7 +16,7 @@ export default function BookEdit() {
   const handleSubmit = async (bookData: {
     title: string;
     author: string;
-    genre: string;
+    genre: BookGenre;
     isbn: string;
     description?: string;
     copies: number;

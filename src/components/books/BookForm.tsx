@@ -9,6 +9,7 @@ interface BookFormProps {
     isbn: string;
     description?: string;
     copies: number;
+    available?: boolean;
   }) => void;
   initialData?: {
     title: string;

@@ -36,15 +36,8 @@ export default function BookList() {
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error loading books</div>;
 
-  const {
-    data: {
-      books = [],
-      total = 0,
-      page: currentPage = 1,
-      pages = 1,
-      limit = 10,
-    } = {},
-  } = response || {};
+  const { data: { books = [], page: currentPage = 1, pages = 1 } = {} } =
+    response || {};
 
   return (
     <div className="space-y-4">

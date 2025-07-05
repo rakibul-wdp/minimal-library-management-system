@@ -7,8 +7,7 @@ export default function BorrowSummary() {
   if (isLoading) return <Loader />;
   if (isError) return <div>Error loading borrow summary</div>;
 
-  const summary = response?.data || [];
-  console.log(summary);
+  const summary = response || [];
 
   return (
     <div className="container mx-auto p-4">

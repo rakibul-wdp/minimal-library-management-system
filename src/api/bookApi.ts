@@ -15,7 +15,7 @@ export const bookApi = baseApi.injectEndpoints({
     }),
     getBook: builder.query<IBook, string>({
       query: (id) => `/books/${id}`,
-      providesTags: (result, error, id) => [{ type: "Book", id }],
+      providesTags: (_result, _error, id) => [{ type: "Book", id }],
     }),
     createBook: builder.mutation<IBook, Partial<IBook>>({
       query: (body) => ({
@@ -34,7 +34,7 @@ export const bookApi = baseApi.injectEndpoints({
         method: "PUT",
         body: changes,
       }),
-      invalidatesTags: (result, error, { id }) => [
+      invalidatesTags: (_result, _error, { id }) => [
         { type: "Book", id },
         "Book",
       ],
