@@ -5,10 +5,12 @@ import Loader from "../components/ui/Loader";
 
 export default function BookDetail() {
   const { id } = useParams<{ id: string }>();
-  const { data: book, isLoading, isError } = useGetBookQuery(id || "");
+  const { data: response, isLoading, isError } = useGetBookQuery(id || "");
 
   if (isLoading) return <Loader />;
-  if (isError || !book) return <div>Error loading book</div>;
+  if (isError || !response?.data) return <div>Error loading book</div>;
+
+  const book = response.data;
 
   return (
     <div className="max-w-2xl mx-auto">

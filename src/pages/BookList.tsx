@@ -11,7 +11,11 @@ export default function BookList() {
   const [page, setPage] = useState(1);
   const [filter, setFilter] = useState("");
   const [deleteId, setDeleteId] = useState<string | null>(null);
-  const { data, isLoading, isError } = useGetBooksQuery({ page, filter });
+  const {
+    data: response,
+    isLoading,
+    isError,
+  } = useGetBooksQuery({ page, filter });
   const [deleteBook] = useDeleteBookMutation();
   const { toast, showToast, hideToast } = useToast();
 
@@ -32,13 +36,23 @@ export default function BookList() {
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error loading books</div>;
 
+  const {
+    data: {
+      books = [],
+      total = 0,
+      page: currentPage = 1,
+      pages = 1,
+      limit = 10,
+    } = {},
+  } = response || {};
+
   return (
     <div className="space-y-4">
       {toast && (
         <Toast message={toast.message} type={toast.type} onClose={hideToast} />
       )}
 
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center mt-3">
         <h1 className="text-2xl font-bold">Book List</h1>
         <select
           value={filter}
@@ -58,11 +72,11 @@ export default function BookList() {
         </select>
       </div>
 
-      <BookTable books={data?.books || []} onDelete={setDeleteId} />
+      <BookTable books={books} onDelete={setDeleteId} />
 
       <Pagination
-        currentPage={page}
-        totalPages={data?.pages || 1}
+        currentPage={currentPage}
+        totalPages={pages}
         onPageChange={setPage}
       />
 

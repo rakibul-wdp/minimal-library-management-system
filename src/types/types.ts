@@ -43,4 +43,11 @@ export interface BookListResponse {
   page: number;
   pages: number;
   limit: number;
+  data: {
+    books: IBook[];
+    total: number;
+    page: number;
+    pages: number;
+    limit: number;
+  };
 }
